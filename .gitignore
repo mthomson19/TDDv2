@@ -5,3 +5,5 @@ virtualenv
 __pycache__
 *.pyc
 /static
+/.idea
+
