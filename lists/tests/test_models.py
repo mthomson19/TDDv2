@@ -14,7 +14,7 @@ class ListAndItemModelsTest(TestCase):
         first_item.save()
 
         second_item = Item()
-        second_item.text = 'The second list item'
+        second_item.text = 'Item the second'
         second_item.list = list_
         second_item.save()
 
@@ -28,7 +28,7 @@ class ListAndItemModelsTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(first_saved_item.list, list_)
-        self.assertEqual(second_saved_item.text, 'The second list item')
+        self.assertEqual(second_saved_item.text, 'Item the second')
         self.assertEqual(second_saved_item.list, list_)
 
     def test_cannot_save_empty_list_items(self):
@@ -38,3 +38,6 @@ class ListAndItemModelsTest(TestCase):
             item.save()
             item.full_clean()
 
+    def test_get_absolute_url(self):
+        list_ = List.objects.create()
+        self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
