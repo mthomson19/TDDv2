@@ -12,7 +12,7 @@ class LayoutAndStylingTest(FunctionalTest):
         # She notices the input bow is nicely centered
         inputbox = self.get_item_input_box()
         self.assertAlmostEqual(
-            inputbox.location['x'] + inputbox.size['width'] /2,
+            inputbox.location['x'] + inputbox.size['width'] / 2,
             512,
             delta=10
         )

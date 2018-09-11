@@ -16,9 +16,9 @@ class FunctionalTest(StaticLiveServerTestCase):
         if staging_server:
             self.live_server_url = 'http://' + staging_server
 
-
     def tearDown(self):
         self.browser.quit()
+
     def wait_for(self, fn):
         start_time = time.time()
         while True:
