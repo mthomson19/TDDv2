@@ -31,12 +31,23 @@
 
 
             <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-6 col-md-offset-3">
                     {% block table %}
                     {% endblock %}
                 </div>
             </div>
 
         </div>
+    <script src="../static/jquery-3.3.1.js"></script>
+    <script src="../static/list.js"></script>
+
+    <script>
+
+$(document).ready(function () {
+  window.Superlists.initialize();
+});
+
+    </script>
+
     </body>
 </html>
