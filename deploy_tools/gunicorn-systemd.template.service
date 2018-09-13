@@ -7,7 +7,9 @@ User=elspeth
 WorkingDirectory=/home/elspeth/sites/DOMAIN
 EnvironmentFile=/home/elspeth/sites/DOMAIN/.env
 
-ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn --bind unix:/tmp/DOMAIN.socket superlists.wsgi:application
+ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/DOMAIN.socket \
+    superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
