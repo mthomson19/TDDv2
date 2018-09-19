@@ -13,4 +13,3 @@ ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn \
 
 [Install]
 WantedBy=multi-user.target
-
